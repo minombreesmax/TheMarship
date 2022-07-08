@@ -61,7 +61,6 @@ public class Platform : MonoBehaviour
                 PlayerPrefs.SetInt("shipNumber", 7);
                 break;
         }
-
     }
 
     public void ShipBuy()
@@ -95,6 +94,5 @@ public class Platform : MonoBehaviour
         Checkmark.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") == index? true : false);
         Lock.gameObject.SetActive(PlayerPrefs.GetInt("Best") < necessaryRecord? true : false);
         buttonUse.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") != index? PlayerPrefs.GetInt("Best") > necessaryRecord? true : false : false);
-        
     }
 }

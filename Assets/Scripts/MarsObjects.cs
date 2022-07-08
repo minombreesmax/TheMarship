@@ -14,7 +14,6 @@ public class MarsObjects : MonoBehaviour
         y = marsObjectRigidbody.transform.position.y;
         z = marsObjectRigidbody.transform.position.z;
         rotationZ = marsObjectRigidbody.transform.rotation.z;
-        
     }
 
     void FixedUpdate()

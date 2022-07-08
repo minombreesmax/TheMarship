@@ -18,7 +18,6 @@ public class Game : MonoBehaviour
     string[] MarsObjects = {"Rock", "Meteor"};
     float score = 0, maxSpeed;
     
-
     void Start()
     {
         var position = new Vector3(-55f, 15f, 0f);
@@ -51,7 +50,6 @@ public class Game : MonoBehaviour
 
     public void Pause()
     {
-        //DataHolder.gameSpeed = Time.timeScale;
         PauseButton.gameObject.SetActive(false);
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
@@ -61,7 +59,6 @@ public class Game : MonoBehaviour
     {
         PauseButton.gameObject.SetActive(true);
         PauseMenu.SetActive(false);
-        //Time.timeScale = DataHolder.gameSpeed;
         Time.timeScale = 1f;
     }
 
@@ -69,14 +66,12 @@ public class Game : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
-        
     }
 
     public void BackToMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
-        
     }
 
     public void GameOver()
@@ -138,7 +133,6 @@ public class Game : MonoBehaviour
 
         if(DataHolder.gameSpeed < maxSpeed)
         {
-            //Time.timeScale += PlayerPrefs.GetFloat("Speed"); 
             DataHolder.gameSpeed += PlayerPrefs.GetFloat("Speed");
         }
 
