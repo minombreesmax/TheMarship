@@ -65,7 +65,11 @@ public class Platform : MonoBehaviour
 
     public void ShipBuy()
     {
-        if(PlayerPrefs.GetInt("Crystals") > price)
+        print($"Crystals:{PlayerPrefs.GetInt("Crystals")}");
+        print($"Price:{price}");
+
+
+        if(PlayerPrefs.GetInt("Crystals") >= price)
         {
             necessaryRecord = 0;
             int Crystals = PlayerPrefs.GetInt("Crystals") - price;

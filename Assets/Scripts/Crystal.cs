@@ -7,7 +7,6 @@ public class Crystal : MonoBehaviour
     void Start()
     {
         DataHolder.crystals = PlayerPrefs.GetInt("Crystals");
-        print("crystal");
     }
 
     void OnCollisionEnter(Collision collision)
@@ -17,7 +16,6 @@ public class Crystal : MonoBehaviour
             gameObject.SetActive(false);
             DataHolder.crystals++;
             PlayerPrefs.SetInt("Crystals", DataHolder.crystals);
-            print("touch");
         }
     }
 }

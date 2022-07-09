@@ -38,6 +38,30 @@ public class Game : MonoBehaviour
         }
     }
 
+    void EnvironmentGeneration() 
+    {
+        if (Time.time % 2f == 0)
+        {
+            string marsObj = MarsObjects[Random.Range(0, MarsObjects.Length)];
+
+            if (marsObj == "Rock")
+            {
+                MarsObjectSpawn(Rocks, PositionX[Random.Range(0, PositionX.Length)]);
+            }
+
+            if (marsObj == "Meteor")
+            {
+                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(15f, 30f));
+
+            }
+        }
+
+        if (Time.time % 0.5 == 0)
+        {
+            MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(-20f, 50f));
+        }
+    }
+
     public void ShipUp()
     {
         DataHolder.up = true;
@@ -136,27 +160,8 @@ public class Game : MonoBehaviour
             DataHolder.gameSpeed += PlayerPrefs.GetFloat("Speed");
         }
 
-        if(Time.time % 2f == 0)
-        {
-            string marsObj = MarsObjects[UnityEngine.Random.Range(0, MarsObjects.Length)];
-
-            if(marsObj == "Rock")
-            {
-                MarsObjectSpawn(Rocks, PositionX[UnityEngine.Random.Range(0, PositionX.Length)]);
-            }
-            
-            if(marsObj == "Meteor")
-            {
-                MarsObjectSpawn(Meteors, UnityEngine.Random.Range(90f, 130f), UnityEngine.Random.Range(15f, 30f));
-
-            }
-        }
-
-        /*if(Time.time % 0.25 == 0)
-        {
-            MarsObjectSpawn(Craters, UnityEngine.Random.Range(80f, 100f), 5f, UnityEngine.Random.Range(-30f, 20f));
-        }*/
-
+        EnvironmentGeneration();
+        
         DesktopControl();
     }
 }
