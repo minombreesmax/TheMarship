@@ -145,7 +145,7 @@ public class Game : MonoBehaviour
     {
         scoreText.gameObject.SetActive(DataHolder.fly);
 
-        if(DataHolder.fly)
+        if (DataHolder.fly)
         {
             ScoreCount();
         } 

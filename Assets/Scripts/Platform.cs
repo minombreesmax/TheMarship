@@ -65,10 +65,6 @@ public class Platform : MonoBehaviour
 
     public void ShipBuy()
     {
-        print($"Crystals:{PlayerPrefs.GetInt("Crystals")}");
-        print($"Price:{price}");
-
-
         if(PlayerPrefs.GetInt("Crystals") >= price)
         {
             necessaryRecord = 0;
@@ -79,7 +75,7 @@ public class Platform : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    public void ShipShow() 
     {
         if(mainCamera.transform.position.x == transform.position.x)
         {
@@ -94,9 +90,14 @@ public class Platform : MonoBehaviour
             shipRigidbody.transform.rotation = Quaternion.Euler(0, rotationY, 0);
             canvas.gameObject.SetActive(false);
         }
-
+        
         Checkmark.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") == index? true : false);
         Lock.gameObject.SetActive(PlayerPrefs.GetInt("Best") < necessaryRecord? true : false);
         buttonUse.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") != index? PlayerPrefs.GetInt("Best") > necessaryRecord? true : false : false);
+    }
+
+    void FixedUpdate()
+    {
+        ShipShow();
     }
 }

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6266098275260526368}
   - component: {fileID: 8147381605452192746}
   - component: {fileID: 6759517779448237609}
-  - component: {fileID: 2300262085350058943}
   - component: {fileID: 8910139448243899459}
+  - component: {fileID: 8138259884801176518}
+  - component: {fileID: 2300262085350058943}
   m_Layer: 0
   m_Name: SpeederB
   m_TagString: Ship
@@ -103,19 +104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2300262085350058943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643079259491678783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSpeed: 0.0003
 --- !u!65 &8910139448243899459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,3 +117,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 0.5305355, z: 1.9615498}
   m_Center: {x: 7.0519596e-17, y: 0.30267164, z: -0.032060195}
+--- !u!95 &8138259884801176518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643079259491678783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d68e6555410c7994cb9d318e9e6d2e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2300262085350058943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643079259491678783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8138259884801176518}
+  shipSpeed: 0.0003

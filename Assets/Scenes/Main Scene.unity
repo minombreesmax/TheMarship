@@ -1312,7 +1312,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 142066214}
   GameOverMenu: {fileID: 727982777}
   Ships:
-  - {fileID: 8788450881504807787, guid: f201e850f23ed6c4b830f9f489f2561e, type: 3}
+  - {fileID: 8023358104369940219, guid: 937baed598779c144918daf831d96ec5, type: 3}
   - {fileID: 8277614068768539091, guid: 026712e0bcd208040b13bbbc591d780a, type: 3}
   - {fileID: 8109989905538726453, guid: 117925434d4efec4c8fa066e55ab47c1, type: 3}
   - {fileID: 8754257567811726008, guid: d15a4577cbf0129408cd666751441258, type: 3}

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5505777952100249386}
   - component: {fileID: 7749714922548501472}
   - component: {fileID: 3141895762483201751}
-  - component: {fileID: 309130454842410402}
   - component: {fileID: 1980823557781168035}
   - component: {fileID: 6623710066108373979}
+  - component: {fileID: 6473364826046309968}
+  - component: {fileID: 309130454842410402}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Ship
@@ -104,19 +105,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &309130454842410402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8109989905538726453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSpeed: 0.00024
 --- !u!65 &1980823557781168035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143,3 +131,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8000004, y: 0.3334589, z: 0.9742845}
   m_Center: {x: -4.1490477e-15, y: 0.2184764, z: 0.81285864}
+--- !u!95 &6473364826046309968
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8109989905538726453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d68e6555410c7994cb9d318e9e6d2e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &309130454842410402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8109989905538726453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6473364826046309968}
+  shipSpeed: 0.00024

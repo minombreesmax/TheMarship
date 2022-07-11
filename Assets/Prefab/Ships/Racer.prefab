@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5015134054392938407}
   - component: {fileID: 7097007327418436461}
   - component: {fileID: 2864008853413051424}
-  - component: {fileID: 7095964245871722161}
   - component: {fileID: 1441577038384032029}
+  - component: {fileID: 1151900165392443112}
+  - component: {fileID: 7095964245871722161}
   m_Layer: 0
   m_Name: Racer
   m_TagString: Ship
@@ -103,19 +104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7095964245871722161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754257567811726008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSpeed: 0.00026
 --- !u!64 &1441577038384032029
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -130,3 +118,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3883144673963555868, guid: b2347bfba8d92f443ae623444509a78a, type: 3}
+--- !u!95 &1151900165392443112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754257567811726008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d68e6555410c7994cb9d318e9e6d2e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7095964245871722161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754257567811726008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1151900165392443112}
+  shipSpeed: 0.00026

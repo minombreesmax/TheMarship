@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5637368851944887500}
   - component: {fileID: 7628818852416462854}
   - component: {fileID: 380199580627018271}
-  - component: {fileID: 1806863334845385670}
   - component: {fileID: 640487194252560879}
+  - component: {fileID: 1566313892041923219}
+  - component: {fileID: 1806863334845385670}
   m_Layer: 0
   m_Name: CargoB
   m_TagString: Ship
@@ -103,19 +104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1806863334845385670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8277614068768539091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipSpeed: 0.00022
 --- !u!65 &640487194252560879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,3 +117,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5000002, y: 0.83834666, z: 2.3678858}
   m_Center: {x: 1.2384358e-16, y: 0.4544038, z: -0.066056445}
+--- !u!95 &1566313892041923219
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277614068768539091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d68e6555410c7994cb9d318e9e6d2e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1806863334845385670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277614068768539091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34074434d3039340a1f9d08e8ea51e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1566313892041923219}
+  shipSpeed: 0.00022
