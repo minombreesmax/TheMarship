@@ -57,9 +57,6 @@ public class Platform : MonoBehaviour
             case 50:
                 PlayerPrefs.SetInt("shipNumber", 6);
                 break;
-            case 70:
-                PlayerPrefs.SetInt("shipNumber", 7);
-                break;
         }
     }
 

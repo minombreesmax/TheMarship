@@ -32,7 +32,7 @@ public class HangarCamera : MonoBehaviour
 
     public void CameraRight()
     {
-        if(transform.position.x < 70)
+        if(transform.position.x < 50)
         {
             CameraMove(20);
         }

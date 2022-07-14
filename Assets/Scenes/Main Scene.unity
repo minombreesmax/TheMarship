@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c945d35096ab1b5459f7eb4d08f376f5,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -147,11 +148,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106770780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 105}
+  m_LocalPosition: {x: 0, y: 0, z: 106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 890932627}
   - {fileID: 1807925369}
+  - {fileID: 890932627}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.46666667, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -632,7 +633,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9115566, b: 0.8820755, a: 1}
+  m_Color: {r: 1, g: 0.8509804, b: 0.7490196, a: 1}
   m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
@@ -678,7 +679,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: 0, z: 0, w: 3.59e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1096,7 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.46666667, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1131,12 +1132,12 @@ PrefabInstance:
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 310
+      value: 266
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -1183,10 +1184,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2822922795842919200, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822922795842919200, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: animationName
+      value: Background2
+      objectReference: {fileID: 0}
     - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_Name
-      value: part 1
+      value: part 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6973466629798455322, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -1238,7 +1254,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.18770026, g: 0.2541187, b: 0.3584906, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.8509804, b: 0.7490196, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1252,7 +1268,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 310
+  far clip plane: 300
   field of view: 20
   orthographic: 0
   orthographic size: 27.086943
@@ -1460,7 +1476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.46666667, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2418,15 +2434,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 106770781}
     m_Modifications:
+    - target: {fileID: 86968181114018326, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 113503575544782076, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -2473,10 +2499,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 388320815911652107, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 545597354255519127, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100198570305020292, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822922795842919200, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822922795842919200, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: animationName
+      value: Background1
+      objectReference: {fileID: 0}
     - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_Name
-      value: part 2
+      value: part 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114319493871571869, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915685200177063410, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3982212526978672052, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601348187838585079, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6973466629798455322, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}

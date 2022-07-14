@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Ships : MonoBehaviour
 {
     public Animator animator;
-    public float shipSpeed, animationSpeed;
+    public float shipSpeed;
+    float animationSpeed;
 
     void Start() 
     {

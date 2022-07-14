@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.85882354, g: 0.46666667, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1397,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -1444,10 +1444,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2338381650711955751, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.550067
+      objectReference: {fileID: 0}
     - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_Name
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899162644687958003, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403568658375163720, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.883411
       objectReference: {fileID: 0}
     - target: {fileID: 6973466629798455322, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -1627,7 +1642,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.18770026, g: 0.2541187, b: 0.3584906, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.8509804, b: 0.7490196, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
