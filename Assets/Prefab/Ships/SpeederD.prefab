@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2172877044852717477}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -55, y: 15, z: 5}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_Children:
   - {fileID: 788105203242451177}
   - {fileID: 7834206793670189711}
@@ -117,8 +117,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8000004, y: 0.723992, z: 2.1850328}
-  m_Center: {x: 1.7480629e-16, y: 0.45382625, z: -0.020318558}
+  m_Size: {x: 2.8000004, y: 0.6359337, z: 2.0969746}
+  m_Center: {x: -1.5681677e-17, y: 0.49785545, z: 0.023710463}
 --- !u!95 &2216264895219901816
 Animator:
   serializedVersion: 3
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2216264895219901816}
-  shipSpeed: 0.00035
+  shipSpeed: 50
 --- !u!1 &4204290638025566585
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e81a6b27e8385f348af9dfc2c0ecd48a, type: 3}
-  m_Color: {r: 0.8113208, g: 0.6971844, b: 0, a: 1}
+  m_Color: {r: 0.8117647, g: 0.69803923, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

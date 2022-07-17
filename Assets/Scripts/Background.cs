@@ -13,7 +13,7 @@ public class Background : MonoBehaviour
 
     void FixedUpdate()
     {
-        x = x > -240? x -= (DataHolder.gameSpeed*0.75f) : 260;
+        x = x > -240? x -= (DataHolder.gameSpeed/2) : 260;
         transform.position = new Vector3(x, 0, 105);
     }
 }

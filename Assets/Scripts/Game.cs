@@ -10,13 +10,13 @@ public class Game : MonoBehaviour
     public Button PauseButton, ResumeButton;
     public Text Score, Best, newRecord, Crystals;
     public GameObject PauseMenu, GameOverMenu;
-    public GameObject[] Ships = new GameObject[8];
+    public GameObject[] Ships = new GameObject[7];
     public GameObject[] Rocks = new GameObject[4];
     public GameObject[] Craters = new GameObject[2];
     public GameObject[] Meteors = new GameObject[2];
-    float[] PositionX = {70f, 80f, 90f, 100f, 110f, 120f};
     string[] MarsObjects = {"Rock", "Meteor"};
-    float score = 0, maxSpeed;
+    float score;
+    const float MAX_SPEED = 3f;
     
     void Start()
     {
@@ -24,15 +24,14 @@ public class Game : MonoBehaviour
         Instantiate(Ships[PlayerPrefs.GetInt("shipNumber")], position, Quaternion.Euler(0f, 90f, 0f));
         scoreText.gameObject.SetActive(false);
         DataHolder.gameOver = false;
-        maxSpeed = 1f + PlayerPrefs.GetFloat("Speed") * 5000f;
         DataHolder.gameSpeed = 1f;
     }
 
-    void MarsObjectSpawn(GameObject[] MarsObj, float posX, float posY = 5, float posZ = 5)
+    void MarsObjectSpawn(GameObject[] MarsObj, float posX, float posY = 5, float posZ = 0)
     {
         if(DataHolder.fly)
         {
-            GameObject marsObj = MarsObj[UnityEngine.Random.Range(0, MarsObj.Length)];
+            GameObject marsObj = MarsObj[Random.Range(0, MarsObj.Length)];
             var position = new Vector3(posX, posY, posZ);
             Instantiate(marsObj, position, Quaternion.identity);
         }
@@ -40,19 +39,18 @@ public class Game : MonoBehaviour
 
     void EnvironmentGeneration() 
     {
-        if (Time.time % 2f == 0)
+        if (Time.time % 1.5f == 0)
         {
             string marsObj = MarsObjects[Random.Range(0, MarsObjects.Length)];
 
             if (marsObj == "Rock")
             {
-                MarsObjectSpawn(Rocks, PositionX[Random.Range(0, PositionX.Length)]);
+                MarsObjectSpawn(Rocks, Random.Range(90f, 120f));
             }
 
             if (marsObj == "Meteor")
             {
-                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(15f, 30f));
-
+                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(22f, 25f));
             }
         }
 
@@ -125,7 +123,7 @@ public class Game : MonoBehaviour
     public void ScoreCount()
     {
         scoreText.text = $"Score: {(int)score}";
-        score += DataHolder.gameSpeed/2;
+        score += DataHolder.gameSpeed;
         Crystals.text = $"{PlayerPrefs.GetInt("Crystals")}";
     }
 
@@ -155,7 +153,7 @@ public class Game : MonoBehaviour
             GameOver();
         }
 
-        if(DataHolder.gameSpeed < maxSpeed)
+        if(DataHolder.gameSpeed < MAX_SPEED)
         {
             DataHolder.gameSpeed += PlayerPrefs.GetFloat("Speed");
         }

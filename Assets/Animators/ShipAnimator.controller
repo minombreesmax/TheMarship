@@ -61,7 +61,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FlyDown
-  m_Speed: 1
+  m_Speed: 0.9
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4786785535271638427}
@@ -169,7 +169,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FlyUp
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -496693687348883027}
@@ -182,7 +182,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 13a2539385f03034fbc4caf8806e06e8, type: 2}
+  m_Motion: {fileID: 7400000, guid: d3aa9b810b1bfc0489f0ba3ac1114e10, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

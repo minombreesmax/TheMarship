@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 816897004866796239}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.401, y: 0.6, z: 0.55}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.13}
   m_Children: []
   m_Father: {fileID: 3084808670889342030}
   m_RootOrder: 0
@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8023358104369940219}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -55, y: 15, z: 0}
+  m_LocalPosition: {x: -55, y: 15, z: 5}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 6639895250520881484}
@@ -396,8 +396,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6000003, y: 0.704805, z: 2.427224}
-  m_Center: {x: 1.5632361e-16, y: 0.40714034, z: -0.022399522}
+  m_Size: {x: 1.6000003, y: 0.704805, z: 2.2607813}
+  m_Center: {x: 6.564647e-17, y: 0.40714034, z: -0.0126088625}
 --- !u!95 &1634358256235761042
 Animator:
   serializedVersion: 3
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1634358256235761042}
-  shipSpeed: 0.0002
+  Speed: 0
 --- !u!1 &8420501274129984694
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 8420501274129984694}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.401, y: 0.6, z: 0.55}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.13}
   m_Children: []
   m_Father: {fileID: 3084808670889342030}
   m_RootOrder: 1

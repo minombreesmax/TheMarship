@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class Ships : MonoBehaviour
 {
     public Animator animator;
-    public float shipSpeed;
-    float animationSpeed;
+    public float Speed;
+    float shipSpeed;
 
     void Start() 
     {
         animator.Play("SetStartPosition");
         DataHolder.fly = true;
+        shipSpeed = Speed / 100000;
         PlayerPrefs.SetFloat("Speed", shipSpeed);
     }
 
@@ -23,7 +24,7 @@ public class Ships : MonoBehaviour
             animator.Play("FlyUp");
             DataHolder.up = false;
         }
-
+        
         if (DataHolder.down)
         {
             animator.Play("FlyDown");
@@ -34,8 +35,6 @@ public class Ships : MonoBehaviour
     void FixedUpdate()
     {
         Fly();
-
-        animationSpeed = animator.speed + (shipSpeed / 2);
-        animator.speed = animationSpeed;
+        animator.speed += (shipSpeed/2);
     }
 }

@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106770780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 106}
+  m_LocalPosition: {x: 0, y: 0, z: 105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1807925369}
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1137,7 +1137,7 @@ PrefabInstance:
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 266
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 133150181821617817, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
@@ -1331,7 +1331,6 @@ MonoBehaviour:
   - {fileID: 8023358104369940219, guid: 937baed598779c144918daf831d96ec5, type: 3}
   - {fileID: 8277614068768539091, guid: 026712e0bcd208040b13bbbc591d780a, type: 3}
   - {fileID: 8109989905538726453, guid: 117925434d4efec4c8fa066e55ab47c1, type: 3}
-  - {fileID: 8754257567811726008, guid: d15a4577cbf0129408cd666751441258, type: 3}
   - {fileID: 5574995554895214871, guid: 866db390ef8baa845b5675a6d4ee483f, type: 3}
   - {fileID: 7643079259491678783, guid: 9b58924d06a6207409f1a7f1dc073a56, type: 3}
   - {fileID: 4370338736168106821, guid: 5757573f6a1ac9243801d2f7f799555a, type: 3}
@@ -1728,8 +1727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309523042}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
-  m_LocalScale: {x: 175, y: 10, z: 115}
+  m_LocalPosition: {x: 0, y: -0, z: 42.8702}
+  m_LocalScale: {x: 200, y: 10, z: 190}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2547,6 +2546,11 @@ PrefabInstance:
     - target: {fileID: 3982212526978672052, guid: fa10fa41501993c48b0fc558b793c1f2,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991528788997491417, guid: fa10fa41501993c48b0fc558b793c1f2,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4601348187838585079, guid: fa10fa41501993c48b0fc558b793c1f2,
