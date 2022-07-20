@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2580381922007599501}
   - component: {fileID: 6668573453738730014}
   - component: {fileID: 672448196005680449}
+  - component: {fileID: 4113771748085563443}
   m_Layer: 0
   m_Name: SpeederC
   m_TagString: Ship
@@ -198,7 +199,7 @@ BoxCollider:
   m_GameObject: {fileID: 4370338736168106821}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.8000004, y: 0.496578, z: 1.8014868}
   m_Center: {x: -2.4863196e-18, y: 0.3267603, z: 0.012190157}
@@ -234,7 +235,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6668573453738730014}
-  shipSpeed: 45
+  Speed: 40
+--- !u!64 &4113771748085563443
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370338736168106821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -134233346573063428, guid: 41bf8e02e27cfe147870effd1d7916ed, type: 3}
 --- !u!1 &5668155113296468180
 GameObject:
   m_ObjectHideFlags: 0

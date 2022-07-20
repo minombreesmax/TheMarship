@@ -11,10 +11,10 @@ public class Platform : MonoBehaviour
     public int index, necessaryRecord, price;
     public Button buttonUse;
     public Canvas canvas;
-    Rigidbody shipRigidbody;
-    float rotationY;
+    private Rigidbody shipRigidbody;
+    private float rotationY;
     
-    void Start()
+    private void Start()
     {
         shipRigidbody = Ship.GetComponent<Rigidbody>();
         rotationY = 180;
@@ -25,7 +25,7 @@ public class Platform : MonoBehaviour
         }
     }
 
-    void ShipRotation()
+    public void ShipRotation()
     {
         rotationY++;
         shipRigidbody.transform.rotation = Quaternion.Euler(0, rotationY, 0);
@@ -93,7 +93,7 @@ public class Platform : MonoBehaviour
         buttonUse.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") != index? PlayerPrefs.GetInt("Best") > necessaryRecord? true : false : false);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         ShipShow();
     }

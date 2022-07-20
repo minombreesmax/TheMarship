@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
         SettingsButton.SetActive(true);
     }
 
-    public void Hangar()
+    public void HangarOpen()
     {
         SceneManager.LoadScene(2);
     }

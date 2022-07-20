@@ -7,9 +7,14 @@ public class Ships : MonoBehaviour
 {
     public Animator animator;
     public float Speed;
-    float shipSpeed;
+    private float shipSpeed;
 
-    void Start() 
+    private void Start() 
+    {
+        ShipStart();
+    }
+
+    private void ShipStart() 
     {
         animator.Play("SetStartPosition");
         DataHolder.fly = true;
@@ -17,7 +22,7 @@ public class Ships : MonoBehaviour
         PlayerPrefs.SetFloat("Speed", shipSpeed);
     }
 
-    void Fly() 
+    private void Fly() 
     {
         if (DataHolder.up)
         {
@@ -30,11 +35,12 @@ public class Ships : MonoBehaviour
             animator.Play("FlyDown");
             DataHolder.down = false;
         }
+
+        animator.speed += (shipSpeed/2);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         Fly();
-        animator.speed += (shipSpeed/2);
     }
 }

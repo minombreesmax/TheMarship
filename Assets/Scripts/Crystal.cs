@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Crystal : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         DataHolder.crystals = PlayerPrefs.GetInt("Crystals");
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Ship")
         {

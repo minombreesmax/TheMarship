@@ -9,17 +9,11 @@ public class HangarCamera : MonoBehaviour
     public GameObject checkmark;
     public Text yourScore, crystals;
 
-    void Start()
+    private void Start()
     {
         transform.position = new Vector3(-70, 40, -80);
         yourScore.text = $"Record: {PlayerPrefs.GetInt("Best")}";
         crystals.text = $"{PlayerPrefs.GetInt("Crystals")}";
-    }
-
-    void CameraMove(float h)
-    {
-        float x = transform.position.x + h;
-        transform.position = new Vector3(x, transform.position.y, transform.position.z);
     }
 
     public void CameraLeft()
@@ -42,4 +36,11 @@ public class HangarCamera : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    private void CameraMove(float h)
+    {
+        float x = transform.position.x + h;
+        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
+
 }

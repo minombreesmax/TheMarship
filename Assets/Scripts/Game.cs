@@ -6,41 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
-    public Text scoreText;
+    const float MAX_SPEED = 3f;
     public Button PauseButton, ResumeButton;
-    public Text Score, Best, newRecord, Crystals;
+    public Text scoreText, Score, Best, newRecord, Crystals;
     public GameObject PauseMenu, GameOverMenu;
     public GameObject[] Ships = new GameObject[7];
     public GameObject[] Rocks = new GameObject[4];
     public GameObject[] Craters = new GameObject[2];
     public GameObject[] Meteors = new GameObject[2];
-    string[] MarsObjects = {"Rock", "Meteor"};
-    float score;
-    const float MAX_SPEED = 3f;
-    
-    void Start()
+    private string[] MarsObjects = {"Rock", "Meteor"};
+    private float score, spawnRate = 1.5f;
+   
+    private void Start()
     {
-        var position = new Vector3(-55f, 15f, 0f);
-        Instantiate(Ships[PlayerPrefs.GetInt("shipNumber")], position, Quaternion.Euler(0f, 90f, 0f));
-        scoreText.gameObject.SetActive(false);
-        DataHolder.gameOver = false;
-        DataHolder.gameSpeed = 1f;
+        GameStart();
+        StartCoroutine(ObstacleGeneration());
+        StartCoroutine(CratersGeneration());
     }
 
-    void MarsObjectSpawn(GameObject[] MarsObj, float posX, float posY = 5, float posZ = 0)
+    #region Coroutines
+ 
+    private IEnumerator ObstacleGeneration() 
     {
-        if(DataHolder.fly)
+        while (true) 
         {
-            GameObject marsObj = MarsObj[Random.Range(0, MarsObj.Length)];
-            var position = new Vector3(posX, posY, posZ);
-            Instantiate(marsObj, position, Quaternion.identity);
-        }
-    }
+            if (spawnRate > 0.5f)
+                spawnRate -= (5 * PlayerPrefs.GetFloat("Speed"));
 
-    void EnvironmentGeneration() 
-    {
-        if (Time.time % 1.5f == 0)
-        {
+            yield return new WaitForSeconds(spawnRate);
             string marsObj = MarsObjects[Random.Range(0, MarsObjects.Length)];
 
             if (marsObj == "Rock")
@@ -53,13 +46,20 @@ public class Game : MonoBehaviour
                 MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(22f, 25f));
             }
         }
+    }
 
-        if (Time.time % 0.5 == 0)
+    private IEnumerator CratersGeneration() 
+    {
+        while (true)
         {
+            yield return new WaitForSeconds(spawnRate/3);
             MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(-20f, 50f));
         }
     }
+    
+    #endregion
 
+    #region UI
     public void ShipUp()
     {
         DataHolder.up = true;
@@ -96,6 +96,8 @@ public class Game : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    #endregion
+
     public void GameOver()
     {
         GameOverMenu.SetActive(DataHolder.gameOver); 
@@ -127,39 +129,62 @@ public class Game : MonoBehaviour
         Crystals.text = $"{PlayerPrefs.GetInt("Crystals")}";
     }
 
-    public void DesktopControl()
+    private void MarsObjectSpawn(GameObject[] MarsObj, float posX, float posY = 5, float posZ = 0)
+    {
+        if (DataHolder.fly)
+        {
+            GameObject marsObj = MarsObj[Random.Range(0, MarsObj.Length)];
+            var position = new Vector3(posX, posY, posZ);
+            Instantiate(marsObj, position, Quaternion.identity);
+        }
+    }
+
+    private void DesktopControl()
     {
         if(Input.GetKey("up"))
         {
             ShipUp();
         }
-        else if(Input.GetKey("down"))
+        
+        if(Input.GetKey("down"))
         {
             ShipDown();
         }
     }
 
-    void FixedUpdate()
+    private void GameStart()
+    {
+        var position = new Vector3(-55f, 15f, 0f);
+        Instantiate(Ships[PlayerPrefs.GetInt("shipNumber")], position, Quaternion.Euler(0f, 90f, 0f));
+        scoreText.gameObject.SetActive(false);
+        DataHolder.gameOver = false;
+        DataHolder.gameSpeed = 1f;
+    }
+
+    private void GameProcess()
     {
         scoreText.gameObject.SetActive(DataHolder.fly);
 
         if (DataHolder.fly)
         {
             ScoreCount();
-        } 
+        }
 
-        if(DataHolder.gameOver)
+        if (DataHolder.gameOver)
         {
             GameOver();
         }
 
-        if(DataHolder.gameSpeed < MAX_SPEED)
+        if (DataHolder.gameSpeed < MAX_SPEED)
         {
             DataHolder.gameSpeed += PlayerPrefs.GetFloat("Speed");
         }
 
-        EnvironmentGeneration();
-        
         DesktopControl();
+    }
+
+    void FixedUpdate()
+    {
+        GameProcess();
     }
 }

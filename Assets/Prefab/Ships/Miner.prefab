@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 6623710066108373979}
   - component: {fileID: 6473364826046309968}
   - component: {fileID: 309130454842410402}
+  - component: {fileID: 1359263847758310914}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Ship
@@ -281,7 +282,7 @@ BoxCollider:
   m_GameObject: {fileID: 8109989905538726453}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.8000004, y: 0.5773367, z: 1.5240052}
   m_Center: {x: -1.6707195e-15, y: 0.37683377, z: -0.44519413}
@@ -294,7 +295,7 @@ BoxCollider:
   m_GameObject: {fileID: 8109989905538726453}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.8000004, y: 0.3334589, z: 0.9742845}
   m_Center: {x: -4.1490477e-15, y: 0.2184764, z: 0.81285864}
@@ -330,7 +331,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6473364826046309968}
-  shipSpeed: 30
+  Speed: 25
+--- !u!64 &1359263847758310914
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8109989905538726453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8468325437920644673, guid: 59bae1ba4bdf8b2499f0651bca141902, type: 3}
 --- !u!1 &8701245710281995708
 GameObject:
   m_ObjectHideFlags: 0

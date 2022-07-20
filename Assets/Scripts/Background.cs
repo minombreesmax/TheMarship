@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    float x;
+    private float x;
 
-    void Start()
+    private void Start()
     {
        x = transform.position.x;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         x = x > -240? x -= (DataHolder.gameSpeed/2) : 260;
         transform.position = new Vector3(x, 0, 105);
