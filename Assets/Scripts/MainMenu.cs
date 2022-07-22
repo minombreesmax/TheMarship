@@ -10,7 +10,14 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        if (PlayerPrefs.GetString("Tutorial") == "OFF")
+        {
+            SceneManager.LoadScene(1);
+        }
+        else 
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     public void SettingsOpen()

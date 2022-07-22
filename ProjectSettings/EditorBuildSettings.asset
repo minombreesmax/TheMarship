@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ship Hangar.unity
     guid: c962fc9c33dd6ef459d6caede507ea84
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: b3c980c63a52475469acb803fa365e66
   m_configObjects: {}

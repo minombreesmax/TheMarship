@@ -21,7 +21,7 @@ public class Game : MonoBehaviour
     {
         GameStart();
         StartCoroutine(ObstacleGeneration());
-        StartCoroutine(CratersGeneration());
+        StartCoroutine(CratersGeneration());   
     }
 
     #region Coroutines
@@ -125,7 +125,7 @@ public class Game : MonoBehaviour
     public void ScoreCount()
     {
         scoreText.text = $"Score: {(int)score}";
-        score += DataHolder.gameSpeed;
+        score += PlayerPrefs.GetFloat("Points");
         Crystals.text = $"{PlayerPrefs.GetInt("Crystals")}";
     }
 

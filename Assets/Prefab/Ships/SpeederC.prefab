@@ -235,7 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6668573453738730014}
-  Speed: 40
+  Speed: 20
+  Points: 1.5
 --- !u!64 &4113771748085563443
 MeshCollider:
   m_ObjectHideFlags: 0

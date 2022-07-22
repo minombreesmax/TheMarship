@@ -7,6 +7,7 @@ public class Ships : MonoBehaviour
 {
     public Animator animator;
     public float Speed;
+    public float Points;
     private float shipSpeed;
 
     private void Start() 
@@ -20,6 +21,7 @@ public class Ships : MonoBehaviour
         DataHolder.fly = true;
         shipSpeed = Speed / 100000;
         PlayerPrefs.SetFloat("Speed", shipSpeed);
+        PlayerPrefs.SetFloat("Points", Points);
     }
 
     private void Fly() 
