@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Platform : MonoBehaviour
 {
-    public GameObject Ship, Checkmark, Lock;
+    public GameObject Ship, Checkmark, Lock, MissCrystalsMenu;
     public Camera mainCamera;
-    public Text shipName, crystals;
+    public Text shipName, crystals, missCrystals;
     public int index, necessaryRecord, price;
     public Button buttonUse;
     public Canvas canvas;
@@ -70,6 +70,11 @@ public class Platform : MonoBehaviour
             PlayerPrefs.SetInt($"Ship{index}_status", necessaryRecord);
             crystals.text = $"{Crystals}";
         }
+        else 
+        {
+            MissCrystalsMenu.SetActive(true);
+            missCrystals.text = $"To buy you need another {price - PlayerPrefs.GetInt("Crystals")} crystals";
+        }
     }
 
     public void ShipShow() 
@@ -87,9 +92,9 @@ public class Platform : MonoBehaviour
             shipRigidbody.transform.rotation = Quaternion.Euler(0, rotationY, 0);
             canvas.gameObject.SetActive(false);
         }
-        
+
         Checkmark.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") == index? true : false);
-        Lock.gameObject.SetActive(PlayerPrefs.GetInt("Best") < necessaryRecord? true : false);
+        Lock.gameObject.SetActive(PlayerPrefs.GetInt("Best") < necessaryRecord && !MissCrystalsMenu.activeInHierarchy ? true : false);
         buttonUse.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") != index? PlayerPrefs.GetInt("Best") > necessaryRecord? true : false : false);
     }
 

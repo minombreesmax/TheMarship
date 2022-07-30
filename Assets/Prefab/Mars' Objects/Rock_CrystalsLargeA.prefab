@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6062086090075482747}
   - component: {fileID: 8341841234294857393}
   - component: {fileID: 8192022520761470704}
-  - component: {fileID: 7003541150267505842}
   - component: {fileID: 5412162981065650424}
+  - component: {fileID: 2376068728346589502}
   m_Layer: 0
   m_Name: Rock_CrystalsLargeA
   m_TagString: Rock
@@ -103,18 +103,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 92
   m_CollisionDetection: 0
---- !u!114 &7003541150267505842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7549387676348481380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f4accfb7c7a76458c9bd896ba85692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5412162981065650424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128,6 +116,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40813422, y: 0.5035237, z: 0.6017262}
   m_Center: {x: 0.024264397, y: 0.25176185, z: 0.014569092}
+--- !u!114 &2376068728346589502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549387676348481380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb581f005af849a42bbac64a1b4b61ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8040501693135909877
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class HangarCamera : MonoBehaviour
 {
-    public GameObject checkmark;
+    public GameObject checkmark, MissCrystalsMenu;
     public Text yourScore, crystals;
 
     private void Start()
+    {
+        CameraInitialize();  
+    }
+
+    public void CameraInitialize() 
     {
         transform.position = new Vector3(-70, 40, -80);
         yourScore.text = $"Record: {PlayerPrefs.GetInt("Best")}";
@@ -22,6 +27,8 @@ public class HangarCamera : MonoBehaviour
         {
             CameraMove(-20);
         }
+
+        MissCrystalsMenu.SetActive(false);
     }
 
     public void CameraRight()
@@ -30,9 +37,11 @@ public class HangarCamera : MonoBehaviour
         {
             CameraMove(20);
         }
+
+        MissCrystalsMenu.SetActive(false);
     }
 
-    public void BackToMainMenu()
+    public void BackToMainMenu() 
     {
         SceneManager.LoadScene(0);
     }

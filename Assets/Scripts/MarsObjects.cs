@@ -4,56 +4,52 @@ using UnityEngine;
 
 public class MarsObjects : MonoBehaviour
 {
-    private Rigidbody marsObjectRigidbody;
-    private float x, y, z, rotationZ;
+    public GameObject[] Rocks = new GameObject[4];
+    public GameObject[] Craters = new GameObject[2];
+    public GameObject[] Meteors = new GameObject[3];
 
-    private void Start()
-    {
-       StartCoroutine(GetMarsObjData());
-    }
-
-    private IEnumerator GetMarsObjData() 
-    {
-        marsObjectRigidbody = GetComponent<Rigidbody>();
-        x = marsObjectRigidbody.transform.position.x;
-        y = marsObjectRigidbody.transform.position.y;
-        z = marsObjectRigidbody.transform.position.z;
-        rotationZ = marsObjectRigidbody.transform.rotation.z;
-        yield return null;
-    }
+    private float spawnRate = 1.5f;
+    private string[] Entities = {"Rock", "Meteor"};
     
-    private void MarsObjectBehavior() 
+    protected IEnumerator ObstacleGeneration()
     {
-        x = x > -110f ? x -= DataHolder.gameSpeed : -115f;
-
-        if (gameObject.tag == "Meteor")
+        while (true)
         {
-            rotationZ++;
-            marsObjectRigidbody.transform.position = new Vector3(x, y, 0);
-            marsObjectRigidbody.transform.rotation = Quaternion.Euler(0, 0, rotationZ);
-        }
+            if (spawnRate > 0.5f)
+                spawnRate -= (5 * PlayerPrefs.GetFloat("Speed"));
 
-        if (gameObject.tag == "Rock" || gameObject.tag == "Crater")
-        {
-            marsObjectRigidbody.transform.position = new Vector3(x, 5f, z);
-        }
+            yield return new WaitForSeconds(spawnRate);
+            string marsObj = Entities[Random.Range(0, Entities.Length)];
 
-        if (marsObjectRigidbody.transform.position.x == -115f)
-        {
-            Destroy(gameObject);
+            if (marsObj == "Rock")
+            {
+                MarsObjectSpawn(Rocks, Random.Range(90f, 120f));
+            }
+
+            if (marsObj == "Meteor")
+            {
+                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(22f, 25f));
+            }
         }
     }
 
-    private void FixedUpdate()
+    protected IEnumerator CratersGeneration()
     {
-        MarsObjectBehavior();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Ship")
+        while (true)
         {
-            DataHolder.gameOver = true;
+            MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(-20f, 50f));
+            yield return new WaitForSeconds(spawnRate / 3);
         }
     }
+
+    private void MarsObjectSpawn(GameObject[] MarsObj, float posX, float posY = 5, float posZ = 0)
+    {
+        if (DataHolder.fly)
+        {
+            GameObject marsObj = MarsObj[Random.Range(0, MarsObj.Length)];
+            var position = new Vector3(posX, posY, posZ);
+            Instantiate(marsObj,position,Quaternion.identity);
+        }
+    }
+
 }

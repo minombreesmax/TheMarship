@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7823524730452854543}
   - component: {fileID: 5437613878541333445}
   - component: {fileID: 2982928256640770929}
-  - component: {fileID: -9045902769125920291}
   - component: {fileID: 876039032848003277}
+  - component: {fileID: 8664722641607712293}
   m_Layer: 0
   m_Name: Meteor_Detailed
   m_TagString: Meteor
@@ -100,18 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 60
   m_CollisionDetection: 0
---- !u!114 &-9045902769125920291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5798021077936312848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f4accfb7c7a76458c9bd896ba85692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &876039032848003277
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -126,3 +114,15 @@ CapsuleCollider:
   m_Height: 0.85
   m_Direction: 0
   m_Center: {x: 0, y: 0.375, z: 0}
+--- !u!114 &8664722641607712293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798021077936312848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb581f005af849a42bbac64a1b4b61ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

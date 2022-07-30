@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6926070567032217491}
   - component: {fileID: 5751380721739496285}
   - component: {fileID: 207559841654827193}
-  - component: {fileID: -200939596327303013}
+  - component: {fileID: 6246843399208032338}
   m_Layer: 0
   m_Name: Meteor_Half
   m_TagString: Meteor
@@ -114,7 +114,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6794962328041094343, guid: 7abc7828508e8c14e93bfb6a426c29b6, type: 3}
---- !u!114 &-200939596327303013
+--- !u!114 &6246843399208032338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8871708688144006726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f4accfb7c7a76458c9bd896ba85692, type: 3}
+  m_Script: {fileID: 11500000, guid: bb581f005af849a42bbac64a1b4b61ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

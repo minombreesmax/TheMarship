@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 5747365919850991012}
   - component: {fileID: 7504766726999341422}
   - component: {fileID: 2450784364897758955}
-  - component: {fileID: 5724753367268746808}
-  - component: {fileID: -8287619708489173142}
   - component: {fileID: 636586399824216057}
+  - component: {fileID: 6197382511831253610}
   m_Layer: 0
   m_Name: Rock_CrystalsLargeB
   m_TagString: Rock
@@ -104,32 +103,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 92
   m_CollisionDetection: 0
---- !u!64 &5724753367268746808
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297519353031088315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -92256106614113052, guid: 84cc5d728166abc47848cd303c65bcf2, type: 3}
---- !u!114 &-8287619708489173142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8297519353031088315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f4accfb7c7a76458c9bd896ba85692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &636586399824216057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,8 +114,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.47387692, y: 0.5013305, z: 0.61868703}
-  m_Center: {x: -0.02633697, y: 0.25066525, z: -0.026075806}
+  m_Size: {x: 0.43503153, y: 0.5013307, z: 0.6186872}
+  m_Center: {x: -0.006914227, y: 0.25066534, z: -0.02607581}
+--- !u!114 &6197382511831253610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297519353031088315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb581f005af849a42bbac64a1b4b61ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7185851505700830057
 PrefabInstance:
   m_ObjectHideFlags: 0
