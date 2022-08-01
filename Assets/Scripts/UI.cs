@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public Button PauseButton; 
-    public GameObject PauseMenu; 
-
+    public GameObject PauseMenu;
+    public AudioSource ClickSound;
+ 
     public void Up()
     {
         DataHolder.up = true;
@@ -21,6 +22,7 @@ public class UI : MonoBehaviour
 
     public void Pause()
     {
+        ClickSound.Play();
         PauseButton.gameObject.SetActive(false);
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
@@ -28,6 +30,7 @@ public class UI : MonoBehaviour
 
     public void Resume()
     {
+        ClickSound.Play();
         PauseButton.gameObject.SetActive(true);
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -35,12 +38,14 @@ public class UI : MonoBehaviour
 
     public void Restart()
     {
+        ClickSound.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
 
     public void BackToMainMenu()
     {
+        ClickSound.Play();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

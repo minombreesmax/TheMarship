@@ -9,6 +9,7 @@ TagManager:
   - Meteor
   - Rock
   - Crater
+  - Fuel
   layers:
   - Default
   - TransparentFX

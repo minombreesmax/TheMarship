@@ -6,39 +6,42 @@ using UnityEngine.UI;
 public class Ships : MonoBehaviour
 {
     public Animator animator;
-    public float Speed;
-    public float Points;
-    private float shipSpeed;
+    public float Speed, Points;
+    private float shipSpeed, flowrate = 0.02f;
 
-    private void Start() 
+    private void Start()
     {
         ShipStart();
     }
 
-    private void ShipStart() 
+    private void ShipStart()
     {
         animator.Play("SetStartPosition");
+
         DataHolder.fly = true;
+
         shipSpeed = Speed / 100000;
+
         PlayerPrefs.SetFloat("Speed", shipSpeed);
         PlayerPrefs.SetFloat("Points", Points);
     }
 
-    private void Fly() 
+    private void Fly()
     {
         if (DataHolder.up)
         {
             animator.Play("FlyUp");
             DataHolder.up = false;
         }
-        
+
         if (DataHolder.down)
         {
             animator.Play("FlyDown");
             DataHolder.down = false;
         }
 
-        animator.speed += (shipSpeed/2);
+        DataHolder.fuel -= flowrate;
+        animator.speed += (shipSpeed / 2);
     }
 
     private void FixedUpdate()

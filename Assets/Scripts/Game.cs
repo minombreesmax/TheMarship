@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class Game : MarsObjects
 {
-    const float MAX_SPEED = 2f;
+    const float MAX_SPEED = 2f, FUEL = 30f;
     public GameObject[] Ships = new GameObject[7];
-    public GameObject GameOverMenu;
+    public GameObject GameOverMenu, Fuelmetr;
     public Button PauseButton;
     public Text scoreText, scoreGameOver, Best, newRecord, Crystals;
     private float score;
 
     public void GameOver()
     {
+        Handheld.Vibrate();
         GameOverMenu.SetActive(DataHolder.gameOver);
         PauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
+        Fuelmetr.gameObject.SetActive(false);
 
         DataHolder.best = PlayerPrefs.HasKey("Best") ? PlayerPrefs.GetInt("Best") : 0;
 
@@ -48,6 +50,7 @@ public class Game : MarsObjects
         var position = new Vector3(-55f, 15f, 0f);
         Instantiate(Ships[PlayerPrefs.GetInt("shipNumber")], position, Quaternion.Euler(0f, 90f, 0f));
         scoreText.gameObject.SetActive(false);
+        DataHolder.fuel = FUEL;
         DataHolder.gameOver = false;
         DataHolder.gameSpeed = 1f;
     }

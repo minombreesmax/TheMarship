@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class HangarCamera : MonoBehaviour
 {
-    public GameObject checkmark, MissCrystalsMenu;
+    public GameObject MissCrystalsMenu;
     public Text yourScore, crystals;
+    public AudioSource ClickSound, SwitchSound;
 
     private void Start()
     {
@@ -43,11 +44,13 @@ public class HangarCamera : MonoBehaviour
 
     public void BackToMainMenu() 
     {
+        ClickSound.Play();
         SceneManager.LoadScene(0);
     }
 
     private void CameraMove(float h)
     {
+        SwitchSound.Play();
         float x = transform.position.x + h;
         transform.position = new Vector3(x, transform.position.y, transform.position.z);
     }

@@ -7,9 +7,10 @@ public class MarsObjects : MonoBehaviour
     public GameObject[] Rocks = new GameObject[4];
     public GameObject[] Craters = new GameObject[2];
     public GameObject[] Meteors = new GameObject[3];
+    public GameObject[] Barrel;
 
     private float spawnRate = 1.5f;
-    private string[] Entities = {"Rock", "Meteor"};
+    private string[] Entities = {"Rock", "Meteor", "Barrel"};
     
     protected IEnumerator ObstacleGeneration()
     {
@@ -28,7 +29,12 @@ public class MarsObjects : MonoBehaviour
 
             if (marsObj == "Meteor")
             {
-                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(22f, 25f));
+                MarsObjectSpawn(Meteors, Random.Range(90f, 130f), Random.Range(21f, 25f));
+            }
+
+            if(marsObj == "Barrel") 
+            {
+                MarsObjectSpawn(Barrel, Random.Range(90f, 120f));
             }
         }
     }

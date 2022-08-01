@@ -11,6 +11,7 @@ public class Platform : MonoBehaviour
     public int index, necessaryRecord, price;
     public Button buttonUse;
     public Canvas canvas;
+    public AudioSource SelectSound, BuySound;
     private Rigidbody shipRigidbody;
     private float rotationY;
     
@@ -34,6 +35,8 @@ public class Platform : MonoBehaviour
 
     public void ShipSelect()
     {
+        SelectSound.Play();
+
         switch(mainCamera.transform.position.x)
         {
             case -70:
@@ -64,6 +67,7 @@ public class Platform : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("Crystals") >= price)
         {
+            BuySound.Play();
             necessaryRecord = 0;
             int Crystals = PlayerPrefs.GetInt("Crystals") - price;
             PlayerPrefs.SetInt("Crystals", Crystals);
