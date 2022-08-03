@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2180222615896923099}
   - component: {fileID: 4153800599179095825}
   - component: {fileID: 9057069785217551385}
-  - component: {fileID: -8254523671087479742}
   - component: {fileID: 6569623311139883555}
+  - component: {fileID: -8254523671087479742}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Meteor
@@ -100,18 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 60
   m_CollisionDetection: 0
---- !u!114 &-8254523671087479742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496612482134593220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea2f1f77b736cb439cea172920981fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &6569623311139883555
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -126,3 +114,16 @@ CapsuleCollider:
   m_Height: 0.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.36851597, z: 0}
+--- !u!114 &-8254523671087479742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496612482134593220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea2f1f77b736cb439cea172920981fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CrystalSound: {fileID: 0}

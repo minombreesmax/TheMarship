@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Crystal : MonoBehaviour
 {
+    public AudioSource CrystalSound;
+
     private void Start()
     {
         DataHolder.crystals = PlayerPrefs.GetInt("Crystals");
@@ -13,6 +15,7 @@ public class Crystal : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ship")
         {
+            CrystalSound.Play();
             gameObject.SetActive(false);
             DataHolder.crystals++;
             PlayerPrefs.SetInt("Crystals", DataHolder.crystals);

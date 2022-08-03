@@ -43,8 +43,9 @@ public class MarsObjects : MonoBehaviour
     {
         while (true)
         {
-            MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(-20f, 50f));
-            yield return new WaitForSeconds(spawnRate / 3);
+            MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(5f, 50f));
+            MarsObjectSpawn(Craters, Random.Range(80f, 100f), 5f, Random.Range(-5f, -30f));
+            yield return new WaitForSeconds(spawnRate/2);
         }
     }
 
