@@ -24,6 +24,9 @@ public class Platform : MonoBehaviour
         {
             necessaryRecord = PlayerPrefs.GetInt($"Ship{index}_status");
         }
+
+        //SelectSound.volume = PlayerPrefs.GetFloat("Volume");
+        //BuySound.volume = PlayerPrefs.GetFloat("Volume");
     }
 
     public void ShipRotation()
@@ -100,10 +103,17 @@ public class Platform : MonoBehaviour
         Checkmark.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") == index? true : false);
         Lock.gameObject.SetActive(PlayerPrefs.GetInt("Best") < necessaryRecord && !MissCrystalsMenu.activeInHierarchy ? true : false);
         buttonUse.gameObject.SetActive(PlayerPrefs.GetInt("shipNumber") != index? PlayerPrefs.GetInt("Best") > necessaryRecord? true : false : false);
+
+        #region audio
+        SelectSound.volume = PlayerPrefs.GetFloat("Volume");
+        BuySound.volume = PlayerPrefs.GetFloat("Volume");
+        #endregion
     }
 
     private void FixedUpdate()
     {
         ShipShow();
+        SelectSound.volume = PlayerPrefs.GetFloat("Volume");
+        BuySound.volume = PlayerPrefs.GetFloat("Volume");
     }
 }

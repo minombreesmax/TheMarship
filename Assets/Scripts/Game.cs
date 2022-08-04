@@ -11,10 +11,13 @@ public class Game : MarsObjects
     public Button PauseButton;
     public Text scoreText, scoreGameOver, Best, newRecord, Crystals;
     private float score;
+    private int shipNumber;
 
     public void GameOver()
     {
-        Handheld.Vibrate();
+        if(PlayerPrefs.GetInt("Vibration") == 1)
+            Handheld.Vibrate();
+
         GameOverMenu.SetActive(DataHolder.gameOver);
         PauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
@@ -48,7 +51,8 @@ public class Game : MarsObjects
     protected void GameStart()
     {
         var position = new Vector3(-55f, 15f, 0f);
-        Instantiate(Ships[PlayerPrefs.GetInt("shipNumber")], position, Quaternion.Euler(0f, 90f, 0f));
+        shipNumber = PlayerPrefs.GetInt("shipNumber");
+        Instantiate(Ships[shipNumber], position, Quaternion.Euler(0f, 90f, 0f));
         scoreText.gameObject.SetActive(false);
         DataHolder.fuel = FUEL;
         DataHolder.gameOver = false;

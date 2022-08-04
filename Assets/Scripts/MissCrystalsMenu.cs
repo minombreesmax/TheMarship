@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MissCrystalsMenu : MonoBehaviour
 {
-    private AudioSource ErrorAudio;
+    private AudioSource ErrorSound;
 
     private void Start()
     {
-        ErrorAudio = GetComponent<AudioSource>();
-        ErrorAudio.Play();
+        ErrorSound = GetComponent<AudioSource>();
+        ErrorSound.volume = PlayerPrefs.GetFloat("Volume");
+        ErrorSound.Play();
     }
 
     public void SetMenuOff()

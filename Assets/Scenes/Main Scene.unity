@@ -2521,6 +2521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseButton: {fileID: 849276195}
   PauseMenu: {fileID: 142066214}
+  Fuelmetr: {fileID: 1486772794}
   ClickSound: {fileID: 1680019151}
 --- !u!82 &1680019151
 AudioSource:

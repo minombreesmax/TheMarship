@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     public GameObject HangarButton, SettingsButton;
     public AudioSource ClickSound;
 
+    private void Start()
+    {
+        //ClickSound.volume = PlayerPrefs.GetFloat("Volume");    
+    }
+
     public void Play()
     {
         ClickSound.Play();
@@ -25,6 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsOpen()
     {
+        ClickSound.Play();
         SettingsMenu.SetActive(true);
         HangarButton.SetActive(false);
         SettingsButton.SetActive(false);
@@ -32,6 +38,7 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsClose()
     {
+        ClickSound.Play();
         SettingsMenu.SetActive(false);
         HangarButton.SetActive(true);
         SettingsButton.SetActive(true);
@@ -41,5 +48,10 @@ public class MainMenu : MonoBehaviour
     {
         ClickSound.Play();
         SceneManager.LoadScene(2);
+    }
+
+    private void FixedUpdate()
+    {
+        ClickSound.volume = PlayerPrefs.GetFloat("Volume");
     }
 }

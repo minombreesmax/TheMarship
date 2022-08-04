@@ -11,6 +11,7 @@ public class Barrel : Rocks
     {
         if (collision.gameObject.tag == "Ship")
         {
+            BarrelSound.volume = PlayerPrefs.GetFloat("Volume");
             BarrelSound.Play();
             DataHolder.fuel = DataHolder.fuel < 25? DataHolder.fuel += 5 : 30;
             barrel.SetActive(false);

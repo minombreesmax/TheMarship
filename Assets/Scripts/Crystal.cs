@@ -9,6 +9,7 @@ public class Crystal : MonoBehaviour
     private void Start()
     {
         DataHolder.crystals = PlayerPrefs.GetInt("Crystals");
+        CrystalSound.volume = PlayerPrefs.GetFloat("Volume");
     }
 
     private void OnCollisionEnter(Collision collision)

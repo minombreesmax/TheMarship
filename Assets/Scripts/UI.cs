@@ -7,9 +7,14 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public Button PauseButton; 
-    public GameObject PauseMenu;
+    public GameObject PauseMenu, Fuelmetr;
     public AudioSource ClickSound;
- 
+
+    private void Start()
+    {
+        ClickSound.volume = PlayerPrefs.GetFloat("Volume");
+    }
+
     public void Up()
     {
         DataHolder.up = true;
@@ -25,6 +30,7 @@ public class UI : MonoBehaviour
         ClickSound.Play();
         PauseButton.gameObject.SetActive(false);
         PauseMenu.SetActive(true);
+        Fuelmetr.SetActive(false);
         Time.timeScale = 0f;
     }
 
@@ -33,6 +39,7 @@ public class UI : MonoBehaviour
         ClickSound.Play();
         PauseButton.gameObject.SetActive(true);
         PauseMenu.SetActive(false);
+        Fuelmetr.SetActive(true);
         Time.timeScale = 1f;
     }
 
@@ -66,5 +73,6 @@ public class UI : MonoBehaviour
     public void FixedUpdate()
     {
         DesktopControl();
+        ClickSound.volume = PlayerPrefs.GetFloat("Volume");
     }
 }
