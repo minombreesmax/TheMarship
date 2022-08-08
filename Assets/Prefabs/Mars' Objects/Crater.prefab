@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7172326606925924102}
   - component: {fileID: 4930823965086577612}
   - component: {fileID: 3803751314702993903}
-  - component: {fileID: 459256997210924277}
+  - component: {fileID: 5932184140899673091}
   m_Layer: 0
   m_Name: Crater
   m_TagString: Crater
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6876207412472730137}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &459256997210924277
+--- !u!114 &5932184140899673091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6876207412472730137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed755267b1072004a8d7f14bba64bf10, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aeeffa2a6ff9094496201f106ce0b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 4

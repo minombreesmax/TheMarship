@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8192022520761470704}
   - component: {fileID: 5412162981065650424}
   - component: {fileID: 663945694026894893}
-  - component: {fileID: 2376068728346589502}
+  - component: {fileID: -7974096323562434399}
   m_Layer: 0
   m_Name: Rock_CrystalsLargeA
   m_TagString: Rock
@@ -213,7 +213,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2376068728346589502
+--- !u!114 &-7974096323562434399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,9 +222,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7549387676348481380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3e7f4b033f10444938f64693f35f61, type: 3}
+  m_Script: {fileID: 11500000, guid: 140b92ead940cef448c5de2642ccd552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 4
+  crystal: {fileID: 5561987749268602161}
 --- !u!1001 &8040501693135909877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,9 +319,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9057069785217551385, guid: 83657940a5696504a97edafbcdb7f781,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 83657940a5696504a97edafbcdb7f781, type: 3}
+--- !u!1 &5561987749268602161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2496612482134593220, guid: 83657940a5696504a97edafbcdb7f781,
+    type: 3}
+  m_PrefabInstance: {fileID: 8040501693135909877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5078924374556993419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3021474994245866622, guid: 83657940a5696504a97edafbcdb7f781,

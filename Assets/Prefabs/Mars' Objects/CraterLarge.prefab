@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 545869408611481912}
   - component: {fileID: 2339521171304402418}
   - component: {fileID: 3257733247367206444}
-  - component: {fileID: 5039605603208361217}
+  - component: {fileID: -103462074271158656}
   m_Layer: 0
   m_Name: CraterLarge
   m_TagString: Crater
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5039605603208361217
+--- !u!114 &-103462074271158656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4284992990884490279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed755267b1072004a8d7f14bba64bf10, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aeeffa2a6ff9094496201f106ce0b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifetime: 4

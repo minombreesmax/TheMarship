@@ -315,6 +315,155 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185223526}
   m_CullTransparentMesh: 1
+--- !u!1001 &450386368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845860, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595987789623845862, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: m_Name
+      value: Pooler
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Barrel
+      value: 
+      objectReference: {fileID: 1081239544380936083, guid: 642275ff0ff2855429e1f298b500d81d,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: poolCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Rocks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Craters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Meteors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Rocks.Array.data[0]
+      value: 
+      objectReference: {fileID: -7974096323562434399, guid: 575d815e8de891e40bef9876477ccfa4,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Rocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 9048289640165767968, guid: 81ce58819da84d54aa0bfc65a2dac612,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Rocks.Array.data[2]
+      value: 
+      objectReference: {fileID: 9176406084388547317, guid: ae43cbea125b92b4abf4334d21ad4256,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Rocks.Array.data[3]
+      value: 
+      objectReference: {fileID: 7078467900955313312, guid: 26522326c1efa6445bc8020bb87ba79c,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Craters.Array.data[0]
+      value: 
+      objectReference: {fileID: 5932184140899673091, guid: 4e7bb17c14b4c3c429bf46209e811371,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Craters.Array.data[1]
+      value: 
+      objectReference: {fileID: -103462074271158656, guid: 08a2599a383475b4db0575c57852e690,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Meteors.Array.data[0]
+      value: 
+      objectReference: {fileID: 5621731298867551267, guid: 3bbf60a93e235374a9403545e2a3ff3e,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Meteors.Array.data[1]
+      value: 
+      objectReference: {fileID: 8664722641607712293, guid: 19fc424daca63cc488f3ccb470ca55ae,
+        type: 3}
+    - target: {fileID: 6013428573570828140, guid: 981a2550d35b3a14db908e5d953cafca,
+        type: 3}
+      propertyPath: Meteors.Array.data[2]
+      value: 
+      objectReference: {fileID: 6246843399208032338, guid: 5ba66705e0925d446b1b34f16f45bbcb,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 981a2550d35b3a14db908e5d953cafca, type: 3}
 --- !u!1 &486115131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1377,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1306,7 +1455,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &963194229
+--- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1315,23 +1464,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae54ffd9a58915488df72a824f4978e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ddf586a28c1df441bab2c191403a616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rocks:
-  - {fileID: 7549387676348481380, guid: 575d815e8de891e40bef9876477ccfa4, type: 3}
-  - {fileID: 8297519353031088315, guid: 81ce58819da84d54aa0bfc65a2dac612, type: 3}
-  - {fileID: 829389891346713221, guid: ae43cbea125b92b4abf4334d21ad4256, type: 3}
-  - {fileID: 7032175054409644584, guid: 26522326c1efa6445bc8020bb87ba79c, type: 3}
-  Craters:
-  - {fileID: 6876207412472730137, guid: 4e7bb17c14b4c3c429bf46209e811371, type: 3}
-  - {fileID: 4284992990884490279, guid: 08a2599a383475b4db0575c57852e690, type: 3}
-  Meteors:
-  - {fileID: 3186524800181579928, guid: 3bbf60a93e235374a9403545e2a3ff3e, type: 3}
-  - {fileID: 5798021077936312848, guid: 19fc424daca63cc488f3ccb470ca55ae, type: 3}
-  - {fileID: 8871708688144006726, guid: 5ba66705e0925d446b1b34f16f45bbcb, type: 3}
-  Barrel:
-  - {fileID: 9080597428079864468, guid: 642275ff0ff2855429e1f298b500d81d, type: 3}
   Ships:
   - {fileID: 8023358104369940219, guid: 937baed598779c144918daf831d96ec5, type: 3}
   - {fileID: 8277614068768539091, guid: 026712e0bcd208040b13bbbc591d780a, type: 3}
