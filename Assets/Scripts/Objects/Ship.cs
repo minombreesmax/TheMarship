@@ -14,32 +14,37 @@ public class Ship : MonoBehaviour
         ShipStart();
     }
 
+    private IEnumerator Control()
+    {
+        yield return new WaitForSeconds(1);
+        GlobalEventManager.ShipUpAction.AddListener(ShipUp);
+        GlobalEventManager.ShipDownAction.AddListener(ShipDown);
+    }
+
     private void ShipStart()
     {
         animator.Play("SetStartPosition");
-
         DataHolder.fly = true;
-
         shipSpeed = Speed / 100000;
 
         PlayerPrefs.SetFloat("Speed", shipSpeed);
         PlayerPrefs.SetFloat("Points", Points);
+
+        StartCoroutine(Control());
+    }
+
+    private void ShipUp() 
+    {
+        animator.Play("FlyUp");
+    }
+
+    private void ShipDown() 
+    {
+        animator.Play("FlyDown");
     }
 
     private void Fly()
     {
-        if (DataHolder.up)
-        {
-            animator.Play("FlyUp");
-            DataHolder.up = false;
-        }
-
-        if (DataHolder.down)
-        {
-            animator.Play("FlyDown");
-            DataHolder.down = false;
-        }
-
         DataHolder.fuel -= flowrate;
         animator.speed += (shipSpeed / 2);
     }

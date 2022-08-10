@@ -41,7 +41,6 @@ public class MarsEntity : MonoBehaviour
     protected void Motion() 
     {
         x = transform.position.x - DataHolder.gameSpeed;
-        gameObject.transform.position = new Vector3(x, transform.position.y, transform.position.z);
     }
 
     private void Deactivate() 
@@ -51,9 +50,9 @@ public class MarsEntity : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ship")
+        if (collision.gameObject.CompareTag("Ship"))
         {
-            DataHolder.gameOver = true;
+            GlobalEventManager.GameOver();
         }
     }
 }

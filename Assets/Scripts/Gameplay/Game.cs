@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Game : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class Game : MonoBehaviour
     private float score;
     private int shipNumber;
 
+    private void Awake()
+    {
+        GlobalEventManager.GameOverAction.AddListener(GameOver);
+    }
+
     private void Start()
     {
         GameStart();
@@ -23,7 +30,7 @@ public class Game : MonoBehaviour
         if(PlayerPrefs.GetInt("Vibration") == 1)
             Handheld.Vibrate();
 
-        GameOverMenu.SetActive(DataHolder.gameOver);
+        GameOverMenu.SetActive(true);
         PauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
         Fuelmetr.gameObject.SetActive(false);
@@ -60,7 +67,6 @@ public class Game : MonoBehaviour
         Instantiate(Ships[shipNumber], position, Quaternion.Euler(0f, 90f, 0f));
         scoreText.gameObject.SetActive(false);
         DataHolder.fuel = FUEL;
-        DataHolder.gameOver = false;
         DataHolder.gameSpeed = 1f;
     }
 
@@ -71,11 +77,6 @@ public class Game : MonoBehaviour
         if (DataHolder.fly)
         {
             ScoreCount();
-        }
-
-        if (DataHolder.gameOver)
-        {
-            GameOver();
         }
 
         if (DataHolder.gameSpeed < MAX_SPEED)

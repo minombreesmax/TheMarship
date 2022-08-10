@@ -8,8 +8,7 @@ public class Meteor : MarsEntity
     {
         Motion();
         rotationZ++;
-        Rigidbody.transform.position = new Vector3(x, y, 0);
-        Rigidbody.transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        Rigidbody.transform.SetPositionAndRotation(new Vector3(x, y, 0), Quaternion.Euler(0, 0, rotationZ));
     }
 
     private void FixedUpdate()

@@ -20,15 +20,13 @@ public class Fuelmetr : MonoBehaviour
         rotationZ = -6 * DataHolder.fuel + 90;
         Mathf.Clamp(rotationZ, MIN_ANGLE, MAX_ANGLE);
         ArrowTransform.eulerAngles = new Vector3(0, 0, rotationZ);
+
+        if(DataHolder.fuel < 0)
+            GlobalEventManager.GameOver();
     }
 
     private void FixedUpdate()
     {
-        if(DataHolder.fuel < 0) 
-        {
-            DataHolder.gameOver = true;
-        }
-
         FuelConsumplion();
     }
 }

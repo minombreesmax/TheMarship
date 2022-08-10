@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    private const int CRATERS_COUNT = 7;
+
     public int poolCount;
     public bool autoExpand = false;
 
@@ -19,7 +21,6 @@ public class ObjectPool : MonoBehaviour
     private readonly string[] MeteorsEntities = { "Meteor", "MeteorDetailed", "MeteorHalf" };
 
     private float spawnRate = 1.5f;
-    private int cratersCount = 7;
 
     private void Start()
     {
@@ -60,16 +61,17 @@ public class ObjectPool : MonoBehaviour
             if (entity == "Meteors") 
             {
                 entity = MeteorsEntities[Random.Range(0, MeteorsEntities.Length)];
+
                 switch (entity) 
                 {
                     case "Meteor":
-                        CreateObject(MeteorsPool, Random.Range(90f, 130f), Random.Range(20f, 24f));
+                        CreateObject(MeteorsPool, Random.Range(90f, 130f), Random.Range(20f, 23f));
                         break;
                     case "MeteorDetailed":
-                        CreateObject(MeteorsPool, Random.Range(90f, 130f), Random.Range(21f, 25f));
+                        CreateObject(MeteorsDetailedPool, Random.Range(90f, 130f), Random.Range(21f, 23f));
                         break;
                     case "MeteorHalf":
-                        CreateObject(MeteorsHalfPool, Random.Range(90f, 130f), Random.Range(19f, 24f));
+                        CreateObject(MeteorsHalfPool, Random.Range(90f, 130f), Random.Range(19f, 22f));
                         break;
                 }
             }
@@ -118,10 +120,10 @@ public class ObjectPool : MonoBehaviour
         BarrelPool = new Pool<MarsEntity>(Barrel, poolCount, transform);
         BarrelPool.autoExpand = autoExpand;
 
-        CratersPool = new Pool<MarsEntity>(Craters[0], cratersCount, transform);
+        CratersPool = new Pool<MarsEntity>(Craters[0], CRATERS_COUNT, transform);
         CratersPool.autoExpand = autoExpand;
 
-        CratersLargePool = new Pool<MarsEntity>(Craters[1], cratersCount, transform);
+        CratersLargePool = new Pool<MarsEntity>(Craters[1], CRATERS_COUNT, transform);
         CratersLargePool.autoExpand = autoExpand;
 
     }

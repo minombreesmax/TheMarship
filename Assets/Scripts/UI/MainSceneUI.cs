@@ -12,17 +12,26 @@ public class MainSceneUI : MonoBehaviour
 
     private void Start()
     {
-        ClickSound.volume = PlayerPrefs.GetFloat("Volume");
+        StartCoroutine(SetVolume());
+    }
+
+    private IEnumerator SetVolume() 
+    {
+        while (true)
+        {
+            ClickSound.volume = PlayerPrefs.GetFloat("Volume");
+            yield return new WaitForSeconds(1);
+        }
     }
 
     public void Up()
     {
-        DataHolder.up = true;
+        GlobalEventManager.ShipUp();
     }
 
     public void Down()
     {
-        DataHolder.down = true;
+        GlobalEventManager.ShipDown();
     }
 
     public void Pause()
@@ -57,22 +66,4 @@ public class MainSceneUI : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void DesktopControl()
-    {
-        if (Input.GetKey("up"))
-        {
-            Up();
-        }
-
-        if (Input.GetKey("down"))
-        {
-            Down();
-        }
-    }
-
-    public void FixedUpdate()
-    {
-        DesktopControl();
-        ClickSound.volume = PlayerPrefs.GetFloat("Volume");
-    }
 }
