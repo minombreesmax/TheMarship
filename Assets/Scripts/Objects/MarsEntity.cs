@@ -40,7 +40,7 @@ public class MarsEntity : MonoBehaviour
 
     protected void Motion() 
     {
-        x = transform.position.x - DataHolder.gameSpeed;
+        x = Rigidbody.transform.position.x - DataHolder.gameSpeed;
     }
 
     private void Deactivate() 
