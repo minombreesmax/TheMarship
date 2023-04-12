@@ -29,7 +29,7 @@ public class Barrel : MarsEntity
         {
             BarrelSound.volume = PlayerPrefs.GetFloat("Volume");
             BarrelSound.Play();
-            DataHolder.fuel = DataHolder.fuel < 25? DataHolder.fuel += 5 : 30;
+            DataHolder.fuel = DataHolder.fuel < 20? DataHolder.fuel += 10 : 30;
             barrel.SetActive(false);
         }
     }

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4671308093831204995
 Transform:
   m_ObjectHideFlags: 0
@@ -223,7 +223,6 @@ MonoBehaviour:
   animator: {fileID: 6668573453738730014}
   Speed: 13
   Points: 3
-  specialAbility: SpecialAbility
 --- !u!64 &4113771748085563443
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -254,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8833739289634939969
 Transform:
   m_ObjectHideFlags: 0

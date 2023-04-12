@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 1806863334845385670}
   - component: {fileID: 5922157946022826938}
   m_Layer: 0
-  m_Name: CargoB
+  m_Name: CargoB Old
   m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,7 +313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6867524174320841699, guid: 9f80c32c9bbf38047b978dcde618685c, type: 3}
+  - {fileID: 2100000, guid: 968124e1a3d97c043bab609ba2102db0, type: 2}
   - {fileID: 2100000, guid: 38bd3e1d61edfff4993cc0c54330eeef, type: 2}
   - {fileID: 2100000, guid: 0ff3ec9504988224aabe1facd167872e, type: 2}
   - {fileID: 2100000, guid: 38bd3e1d61edfff4993cc0c54330eeef, type: 2}

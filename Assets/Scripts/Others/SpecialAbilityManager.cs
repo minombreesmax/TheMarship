@@ -14,16 +14,22 @@ public class SpecialAbilityManager : SpecialAbilities
 
     private void Start()
     {
-        DataHolder.specialAbility = 0;
+        DataHolder.specialAbility = 5;
         StartCoroutine(SpecialAbilityStatus());
+    }
+
+    private void FindShip() 
+    {
+        Ship = GameObject.FindGameObjectWithTag("Ship");
+        shipAnimator = Ship.GetComponent<Animator>();
     }
 
     public void UseSpecialAbility() 
     {
-        Ship = GameObject.FindGameObjectWithTag("Ship");
+        FindShip();
         DataHolder.specialAbility = 0;
         DataHolder.fuel = 30;
-
+        
         for(int i = 0; i < ShipNames.Length; i++) 
         {
             if(ShipNames[i] == Ship.name) 
@@ -55,6 +61,7 @@ public class SpecialAbilityManager : SpecialAbilities
             }
         }
     }
+
 
     private IEnumerator SpecialAbilityStatus() 
     {

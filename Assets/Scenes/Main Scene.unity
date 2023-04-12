@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ships:
   - {fileID: 8023358104369940219, guid: 937baed598779c144918daf831d96ec5, type: 3}
-  - {fileID: 8277614068768539091, guid: 026712e0bcd208040b13bbbc591d780a, type: 3}
+  - {fileID: 6868009436025025706, guid: eaf7f32c260c4e54b8ff4c5b16172557, type: 3}
   - {fileID: 8109989905538726453, guid: 117925434d4efec4c8fa066e55ab47c1, type: 3}
   - {fileID: 5574995554895214871, guid: 866db390ef8baa845b5675a6d4ee483f, type: 3}
   - {fileID: 7643079259491678783, guid: 9b58924d06a6207409f1a7f1dc073a56, type: 3}
@@ -3270,6 +3270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058f7983f4f466b4fb6754799fad3940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Up: {fileID: 779470620}
+  Down: {fileID: 1665984043}
+  Pause: {fileID: 849276195}
   Slider: {fileID: 1384073966}
   Button: {fileID: 1740983572}
 --- !u!114 &1798359934
@@ -3284,6 +3287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f1b740431ff624b97c2b3380a4e7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Up: {fileID: 779470620}
+  Down: {fileID: 1665984043}
+  Pause: {fileID: 849276195}
 --- !u!1001 &1807925368
 PrefabInstance:
   m_ObjectHideFlags: 0
