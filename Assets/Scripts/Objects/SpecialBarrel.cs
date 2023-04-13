@@ -6,7 +6,9 @@ public class SpecialBarrel : Barrel
 {
     protected override void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ship")
+        var tag = collision.gameObject.tag;
+
+        if (tag == "Ship" || tag == "Shield")
         {
             BarrelSound.volume = PlayerPrefs.GetFloat("Volume");
             BarrelSound.Play();

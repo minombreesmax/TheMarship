@@ -54,5 +54,12 @@ public class MarsEntity : MonoBehaviour
         {
             GlobalEventManager.GameOver();
         }
+
+        if (collision.gameObject.CompareTag("Shield")) 
+        {
+            this.gameObject.SetActive(false);
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            collision.gameObject.tag = "Ship";
+        }
     }
 }

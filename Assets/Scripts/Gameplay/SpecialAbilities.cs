@@ -10,6 +10,8 @@ public class SpecialAbilities : MonoBehaviour
     protected Animator shipAnimator;
 
     private GameObject CargoB, CargoBT;
+    private GameObject[] Gun = new GameObject[2];
+    private GameObject Shield;
 
     protected void SetTurboModeAbility()
     {
@@ -18,19 +20,24 @@ public class SpecialAbilities : MonoBehaviour
 
     protected void SetTransparencyAbility()
     {
-        StartCoroutine("Transparency");
+        StartCoroutine(Transparency());
     }
 
-    protected void SetShootingAbility()
+    protected void SetShootingAbility(GameObject shot)
     {
-        print("ShootingAbility");
+        GetShipGun();
+        StartCoroutine(Shooting(shot, Gun));
     }
 
     protected void SetProtectiveShieldAbility()
     {
-        print("ProtectiveShieldAbility");
+        GetShipShield();
+        Shield.SetActive(true);
+        Ship.tag = "Shield";
+        DataHolder.specialAbility = 0;
     }
-
+    
+    #region abilities
     protected void SetAutoPilotAbility()
     {
         print("AutoPilotAbility");
@@ -45,6 +52,7 @@ public class SpecialAbilities : MonoBehaviour
     {
         print("XAbility");
     }
+    #endregion
 
     private void SetButtonStatus(bool status)
     {
@@ -53,6 +61,12 @@ public class SpecialAbilities : MonoBehaviour
         Pause.interactable = status;
     }
 
+    private void SetShipChildStatus(bool status) 
+    {
+        CargoB.SetActive(!status);
+        CargoBT.SetActive(status);
+    }
+    
     private void GetShipChild() 
     {
         if (Ship.name == "CargoB(Clone)") 
@@ -61,11 +75,27 @@ public class SpecialAbilities : MonoBehaviour
             CargoBT = Ship.transform.GetChild(1).gameObject;
         }
     }
-
-    private void SetShipChildStatus(bool status) 
+    
+    private void GetShipGun() 
     {
-        CargoB.SetActive(!status);
-        CargoBT.SetActive(status);
+        if(Ship.name == "Miner(Clone)") 
+        {
+            var mainGun = Ship.transform.GetChild(0).gameObject;
+            Gun[0] = mainGun.transform.GetChild(0).gameObject;
+            Gun[1] = mainGun.transform.GetChild(1).gameObject;
+
+            foreach (var gun in Gun)
+            {
+                float x = gun.transform.position.x + 0.1f;
+                gun.transform.position = new Vector2(x, gun.transform.position.y);
+            }
+        }
+    }
+
+    private void GetShipShield() 
+    {
+        if (Ship.name == "SpeederA(Clone)")
+            Shield = Ship.transform.GetChild(0).gameObject;
     }
 
     private IEnumerator TurboMode() 
@@ -86,4 +116,18 @@ public class SpecialAbilities : MonoBehaviour
         yield return new WaitForSecondsRealtime(10);
         SetShipChildStatus(false);
     }
+
+    private IEnumerator Shooting(GameObject shot, GameObject[] gun) 
+    {
+        while (true)
+        {
+            Instantiate(shot, gun[0].transform.position, Quaternion.Euler(90, 90, 0));
+            yield return new WaitForSeconds(1);
+            Instantiate(shot, gun[1].transform.position, Quaternion.Euler(90, 90, 0));
+
+            if (DataHolder.specialAbility <= 0)
+                break;
+        }
+    }
+
 }

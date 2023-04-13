@@ -21,5 +21,4 @@ public class GlobalEventManager
     {
         ShipDownAction.Invoke();
     }
-
 }

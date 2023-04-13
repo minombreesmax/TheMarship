@@ -11,6 +11,7 @@ public class SpecialAbilityManager : SpecialAbilities
     private string[] ShipNames = { "CargoA(Clone)", "CargoB(Clone)", "Miner(Clone)", 
         "SpeederA(Clone)", "SpeederB(Clone)", "SpeederC(Clone)", "SpeederD(Clone)" };
 
+    [SerializeField] private GameObject Shot;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class SpecialAbilityManager : SpecialAbilities
     public void UseSpecialAbility() 
     {
         FindShip();
-        DataHolder.specialAbility = 0;
+        StartCoroutine(SliderMinus());  
         DataHolder.fuel = 30;
         
         for(int i = 0; i < ShipNames.Length; i++) 
@@ -43,7 +44,7 @@ public class SpecialAbilityManager : SpecialAbilities
                         SetTransparencyAbility();
                         break;
                     case 2:
-                        SetShootingAbility();
+                        SetShootingAbility(Shot);
                         break;
                     case 3:
                         SetProtectiveShieldAbility();
@@ -62,7 +63,6 @@ public class SpecialAbilityManager : SpecialAbilities
         }
     }
 
-
     private IEnumerator SpecialAbilityStatus() 
     {
         while (true) 
@@ -71,6 +71,24 @@ public class SpecialAbilityManager : SpecialAbilities
             Button.gameObject.SetActive(DataHolder.specialAbility == 5 ? true : false);
 
             yield return null;
+        }
+    }
+
+    private IEnumerator SliderMinus()
+    {
+        while (true)
+        {
+            if (DataHolder.specialAbility > 0)
+            {
+                DataHolder.specialAbility -= 0.05f;
+            }
+            else
+            {
+                DataHolder.specialAbility = 0;
+                break;
+            }
+
+            yield return new WaitForSecondsRealtime(0.1f);
         }
     }
 }
