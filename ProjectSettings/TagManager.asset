@@ -11,6 +11,7 @@ TagManager:
   - Crater
   - Fuel
   - Shield
+  - Barrel
   layers:
   - Default
   - TransparentFX

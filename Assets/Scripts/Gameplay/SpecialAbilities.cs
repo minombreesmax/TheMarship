@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,8 @@ public class SpecialAbilities : MonoBehaviour
 
     private GameObject CargoB, CargoBT;
     private GameObject[] Gun = new GameObject[2];
-    private GameObject Shield;
+    private GameObject Shield, RadarObject;
+    private Behaviour shipAutopilot, shipRadar;
 
     protected void SetTurboModeAbility()
     {
@@ -37,22 +39,27 @@ public class SpecialAbilities : MonoBehaviour
         DataHolder.specialAbility = 0;
     }
     
-    #region abilities
     protected void SetAutoPilotAbility()
     {
-        print("AutoPilotAbility");
+        GetAutopilot();
+        shipAutopilot.enabled = true;
+        SetButtonStatus(false);
+        StartCoroutine(Autopilot());
     }
 
     protected void SetRadarAbility()
     {
-        print("RadarAbility");
+        GetRadar();
+        shipRadar.enabled = true;
+        Pause.interactable = false;
+        StartCoroutine(Radar());
     }
 
     protected void SetXAbility()
     {
         print("XAbility");
     }
-    #endregion
+    
 
     private void SetButtonStatus(bool status)
     {
@@ -98,6 +105,20 @@ public class SpecialAbilities : MonoBehaviour
             Shield = Ship.transform.GetChild(0).gameObject;
     }
 
+    private void GetAutopilot() 
+    {
+        if (Ship.name == "SpeederB(Clone)")
+            shipAutopilot = Ship.GetComponent<Autopilot>();
+    }
+
+    private void GetRadar() 
+    {
+        if (Ship.name == "SpeederC(Clone)")
+            shipRadar = Ship.GetComponent<Radar>();
+
+        RadarObject = Ship.transform.GetChild(0).gameObject;  
+    }
+
     private IEnumerator TurboMode() 
     {
         SetButtonStatus(false);
@@ -127,6 +148,37 @@ public class SpecialAbilities : MonoBehaviour
 
             if (DataHolder.specialAbility <= 0)
                 break;
+        }
+    }
+
+    private IEnumerator Autopilot() 
+    {
+        while (true) 
+        {
+            if(DataHolder.specialAbility <= 0) 
+            {
+                shipAutopilot.enabled = false;
+                SetButtonStatus(true);
+                break;
+            }
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator Radar() 
+    {
+        while (true) 
+        {
+            if(DataHolder.specialAbility <= 0) 
+            {
+                RadarObject.SetActive(false);
+                Pause.interactable = true;
+                shipRadar.enabled = false;
+                break;
+            }
+
+            yield return null;
         }
     }
 

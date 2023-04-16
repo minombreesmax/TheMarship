@@ -9754,6 +9754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button "Use"
       objectReference: {fileID: 0}
+    - target: {fileID: 5363489993098654544, guid: c31d42d2bece69a4e9a96d250f68c9bb,
+        type: 3}
+      propertyPath: m_Text
+      value: Use
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c31d42d2bece69a4e9a96d250f68c9bb, type: 3}
 --- !u!1001 &8624590145320673724

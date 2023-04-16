@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5819287056577875215}
   m_Layer: 0
   m_Name: barrel
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1081239544380936083}
   m_Layer: 0
   m_Name: FuelBarrel
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

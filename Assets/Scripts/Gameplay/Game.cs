@@ -9,7 +9,7 @@ public class Game : MonoBehaviour
 {
     const float MAX_SPEED = 2f, FUEL = 30f;
     public GameObject[] Ships = new GameObject[7];
-    public GameObject GameOverMenu, Fuelmetr;
+    public GameObject GameOverMenu, Fuelmetr, SpecialAbility;
     public Button PauseButton;
     public Text scoreText, scoreGameOver, Best, newRecord, Crystals;
     private float score;
@@ -34,6 +34,8 @@ public class Game : MonoBehaviour
         PauseButton.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(false);
         Fuelmetr.gameObject.SetActive(false);
+        SpecialAbility.gameObject.SetActive(false);
+        DataHolder.specialAbility = 0;
 
         DataHolder.best = PlayerPrefs.HasKey("Best") ? PlayerPrefs.GetInt("Best") : 0;
 
