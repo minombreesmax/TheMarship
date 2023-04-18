@@ -55,12 +55,13 @@ public class SpecialAbilities : MonoBehaviour
         StartCoroutine(Radar());
     }
 
-    protected void SetXAbility()
+    protected void SetXAbility(GameObject shot)
     {
-        print("XAbility");
+        SetAutoPilotAbility();
+        SetShootingAbility(shot);
+        StartCoroutine(XAbility());
     }
     
-
     private void SetButtonStatus(bool status)
     {
         Up.interactable = status;
@@ -85,7 +86,7 @@ public class SpecialAbilities : MonoBehaviour
     
     private void GetShipGun() 
     {
-        if(Ship.name == "Miner(Clone)") 
+        if(Ship.name == "Miner(Clone)" || Ship.name == "SpeederD(Clone)") 
         {
             var mainGun = Ship.transform.GetChild(0).gameObject;
             Gun[0] = mainGun.transform.GetChild(0).gameObject;
@@ -103,11 +104,15 @@ public class SpecialAbilities : MonoBehaviour
     {
         if (Ship.name == "SpeederA(Clone)")
             Shield = Ship.transform.GetChild(0).gameObject;
+
+        if (Ship.name == "SpeederD(Clone)")
+            Shield = Ship.transform.GetChild(1).gameObject;
+
     }
 
     private void GetAutopilot() 
     {
-        if (Ship.name == "SpeederB(Clone)")
+        if (Ship.name == "SpeederB(Clone)" || Ship.name == "SpeederD(Clone)")
             shipAutopilot = Ship.GetComponent<Autopilot>();
     }
 
@@ -182,4 +187,13 @@ public class SpecialAbilities : MonoBehaviour
         }
     }
 
+    private IEnumerator XAbility()
+    {
+        SetButtonStatus(false);
+        Time.timeScale = 1.5f;
+        yield return new WaitUntil(() => DataHolder.specialAbility == 0);
+        SetProtectiveShieldAbility();
+        Time.timeScale = 1f;
+        SetButtonStatus(true);
+    }
 }

@@ -57,9 +57,11 @@ public class MarsEntity : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Shield")) 
         {
+            var gameObject = collision.gameObject;
+            int index = gameObject.name == "SpeederA(Clone)" ? 0 : 1;
             this.gameObject.SetActive(false);
-            collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            collision.gameObject.tag = "Ship";
+            gameObject.transform.GetChild(index).gameObject.SetActive(false);
+            gameObject.tag = "Ship";
         }
     }
 }

@@ -56,7 +56,7 @@ public class SpecialAbilityManager : SpecialAbilities
                         SetRadarAbility();
                         break;
                     case 6:
-                        SetXAbility();
+                        SetXAbility(Shot);
                         break;
                 }
             }
